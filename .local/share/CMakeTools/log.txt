@@ -1,0 +1,92 @@
+2022-10-22T03:08:52.057Z [debug] [main] Safe constructing new CMakeTools instance
+2022-10-22T03:08:52.057Z [debug] [variant] Constructing VariantManager
+2022-10-22T03:08:52.057Z [debug] [main] Constructing new CMakeTools instance
+2022-10-22T03:08:52.057Z [debug] [main] Starting CMakeTools second-phase init
+2022-10-22T03:08:52.098Z [info] [variant] Loaded new set of variants
+2022-10-22T03:08:52.098Z [debug] [main] CMakeTools instance initialization complete.
+2022-10-22T03:08:52.099Z [debug] [kit] Reading kits file /Users/lidiadesantiago/.local/share/CMakeTools/cmake-tools-kits.json
+2022-10-22T03:08:52.112Z [info] [kit] Successfully loaded 1 kits from /Users/lidiadesantiago/.local/share/CMakeTools/cmake-tools-kits.json
+2022-10-22T03:08:52.114Z [debug] [kit] Not reading non-existent kits file: /Users/lidiadesantiago/Documents/Data-Structures/.vscode/cmake-kits.json
+2022-10-22T03:09:07.159Z [debug] [extension] Deactivate CMakeTools
+2022-10-22T03:08:39.640Z [fatal] [rollbar] Unhandled exception: Unhandled Promise rejection: Post-folder-open Canceled: Canceled {"folder":{"uri":{"$mid":1,"fsPath":"/Users/lidiadesantiago/Documents/Data-Structures","external":"file:///Users/lidiadesantiago/Documents/Data-Structures","path":"/Users/lidiadesantiago/Documents/Data-Structures","scheme":"file"},"name":"Data-Structures","index":0}}
+:52:38.092Z [debug] [cache] Cache file does not exist: Returning empty cache data
+2022-09-18T00:53:25.026Z [debug] [extension] Deactivate CMakeTools
+ntents/Resources/app/bin
+2022-09-17T21:16:37.910Z [debug] [kit] Found 0 kits in directory /Applications/Visual Studio Code.app/Contents/Resources/app/bin
+2022-09-17T21:16:37.911Z [debug] [kit] Scanning directory /bin for compilers
+2022-09-17T21:16:37.911Z [debug] [kit] Scanning directory /sbin for compilers
+2022-09-17T21:16:37.911Z [debug] [kit] Skipping scan of not existing path undefined\LLVM\bin
+2022-09-17T21:16:37.911Z [debug] [kit] Found 0 kits in directory undefined\LLVM\bin
+2022-09-17T21:16:37.917Z [debug] [kit] Found 0 kits in directory /usr/local/bin
+2022-09-17T21:16:37.918Z [debug] [kit] Found 0 kits in directory /bin
+2022-09-17T21:16:37.919Z [debug] [kit] Found 0 kits in directory /sbin
+2022-09-17T21:16:37.919Z [debug] [kit] Found 0 kits in directory /Library/Apple/usr/bin
+2022-09-17T21:16:37.924Z [debug] [kit] Found 0 kits in directory /usr/sbin
+2022-09-17T21:16:37.927Z [debug] [kit] Testing Clang binary: /usr/bin/clang
+2022-09-17T21:16:37.927Z [info] [proc] Executing command: /usr/bin/clang -v
+2022-09-17T21:16:37.932Z [debug] [kit] Testing GCC binary: /usr/bin/gcc
+2022-09-17T21:16:37.932Z [info] [proc] Executing command: /usr/bin/gcc -v
+2022-09-17T21:16:37.938Z [debug] [kit] Testing GCC binary: /usr/bin/llvm-gcc
+2022-09-17T21:16:37.939Z [info] [proc] Executing command: /usr/bin/llvm-gcc -v
+2022-09-17T21:16:38.095Z [debug] [kit] Detected Clang compiler: /usr/bin/clang
+2022-09-17T21:16:38.095Z [debug] [kit] Detected Clang compiler: /usr/bin/clang
+2022-09-17T21:16:38.095Z [debug] [kit] Bad GCC binary. "/usr/bin/llvm-gcc -v" reports version:  output: Apple clang version 13.1.6 (clang-1316.0.21.2.5)
+Target: arm64-apple-darwin21.6.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+2022-09-17T21:16:38.095Z [debug] [kit] Bad GCC binary. "/usr/bin/gcc -v" reports version:  output: Apple clang version 13.1.6 (clang-1316.0.21.2.5)
+Target: arm64-apple-darwin21.6.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+2022-09-17T21:16:38.097Z [debug] [kit] Found 1 kits in directory /usr/bin
+2022-09-17T21:16:38.097Z [info] [kit] Found Kit: Clang 13.1.6 arm64-apple-darwin21.6.0
+2022-09-17T21:16:38.098Z [debug] [kitsController] Saving kits to /Users/lidiadesantiago/.local/share/CMakeTools/cmake-tools-kits.json
+2022-09-17T21:16:38.098Z [debug] [kitsController] Saving new kits to /Users/lidiadesantiago/.local/share/CMakeTools/cmake-tools-kits.json
+2022-09-17T21:16:40.682Z [debug] [extension] Configuring workspace on open file:///Users/lidiadesantiago/Documents/Data-Structures/stacks_quiz
+2022-09-17T21:16:40.683Z [debug] [kitsController] Start selection of kits. Found 3 kits.
+2022-09-17T21:16:40.683Z [debug] [kitsController] Opening kit selection QuickPick
+2022-09-17T21:16:43.548Z [debug] [kitsController] User cancelled Kit selection
+2022-09-17T21:16:43.613Z [debug] [main] Not starting CMake driver: no kit selected
+2022-09-17T21:17:10.386Z [debug] [extension] [8653] cmake.launchTarget started
+2022-09-17T21:17:10.387Z [debug] [kitsController] Start selection of kits. Found 3 kits.
+2022-09-17T21:17:10.387Z [debug] [kitsController] Opening kit selection QuickPick
+2022-09-17T21:17:15.701Z [debug] [kitsController] User selected kit {"label":"Clang 13.1.6 arm64-apple-darwin21.6.0","description":"Using compilers: C = /usr/bin/clang, CXX = /usr/bin/clang++","kit":{"name":"Clang 13.1.6 arm64-apple-darwin21.6.0","compilers":{"C":"/usr/bin/clang","CXX":"/usr/bin/clang++"}}}
+2022-09-17T21:17:15.702Z [debug] [main] Injecting new Kit into CMake driver
+2022-09-17T21:17:15.715Z [info] [main] Configuring folder: stacks_quiz 
+2022-09-17T21:17:15.716Z [debug] [main] Saving open files before configure/build
+2022-09-17T21:17:15.735Z [debug] [main] Configuration of project failed.
+2022-09-17T21:17:15.735Z [debug] [extension] [8653] cmake.launchTarget finished (returned null)
+2022-09-17T21:18:02.144Z [debug] [extension] [1565] cmake.launchTarget started
+2022-09-17T21:18:02.148Z [info] [main] Configuring folder: stacks_quiz 
+2022-09-17T21:18:02.148Z [debug] [main] Saving open files before configure/build
+2022-09-17T21:18:02.151Z [debug] [main] Configuration of project failed.
+2022-09-17T21:18:02.151Z [debug] [extension] [1565] cmake.launchTarget finished (returned null)
+2022-09-17T21:18:20.039Z [debug] [extension] [7697] cmake.selectKit started
+2022-09-17T21:18:20.039Z [debug] [kitsController] Start selection of kits. Found 3 kits.
+2022-09-17T21:18:20.039Z [debug] [kitsController] Opening kit selection QuickPick
+2022-09-17T21:18:20.750Z [debug] [kitsController] User cancelled Kit selection
+2022-09-17T21:18:20.753Z [debug] [extension] [7697] cmake.selectKit finished (returned false)
+2022-09-17T21:18:23.873Z [debug] [extension] [2391] cmake.selectKit started
+2022-09-17T21:18:23.874Z [debug] [kitsController] Start selection of kits. Found 3 kits.
+2022-09-17T21:18:23.874Z [debug] [kitsController] Opening kit selection QuickPick
+2022-09-17T21:18:28.041Z [debug] [kitsController] User selected kit {"label":"[Unspecified]","description":"Unspecified (Let CMake guess what compilers and environment to use)","kit":{"name":"__unspec__"}}
+2022-09-17T21:18:28.042Z [debug] [main] Injecting new Kit into CMake driver
+2022-09-17T21:18:28.092Z [debug] [extension] [2391] cmake.selectKit finished (returned true)
+2022-09-17T21:18:32.038Z [debug] [extension] [2159] cmake.launchTarget started
+2022-09-17T21:18:32.043Z [info] [main] Configuring folder: stacks_quiz 
+2022-09-17T21:18:32.043Z [debug] [main] Saving open files before configure/build
+2022-09-17T21:18:32.077Z [debug] [main] Configuration of project failed.
+2022-09-17T21:18:32.077Z [debug] [extension] [2159] cmake.launchTarget finished (returned null)
+2022-09-17T21:19:01.899Z [debug] [extension] [1988] cmake.launchTarget started
+2022-09-17T21:19:01.903Z [info] [main] Configuring folder: stacks_quiz 
+2022-09-17T21:19:01.903Z [debug] [main] Saving open files before configure/build
+2022-09-17T21:19:01.905Z [debug] [main] Configuration of project failed.
+2022-09-17T21:19:01.906Z [debug] [extension] [1988] cmake.launchTarget finished (returned null)
+2022-09-17T21:19:19.915Z [debug] [extension] [8744] cmake.launchTarget started
+2022-09-17T21:19:19.919Z [info] [main] Configuring folder: stacks_quiz 
+2022-09-17T21:19:19.920Z [debug] [main] Saving open files before configure/build
+2022-09-17T21:19:19.923Z [debug] [main] Configuration of project failed.
+2022-09-17T21:19:19.923Z [debug] [extension] [8744] cmake.launchTarget finished (returned null)
+2022-09-17T22:22:01.030Z [debug] [extension] Deactivate CMakeTools

@@ -1,0 +1,212 @@
+{
+	"name": "valgrind-task-integration",
+	"displayName": "Valgrind Task Integration",
+	"description": "Integrate valgrind into vscode tasks and launch config",
+	"author": "1nVitr0",
+	"publisher": "1nVitr0",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/1nVitr0/plugin-vscode-valgrind-task-integration.git"
+	},
+	"icon": "resources/icon.png",
+	"version": "1.0.1",
+	"engines": {
+		"vscode": "^1.53.0"
+	},
+	"categories": [
+		"Debuggers",
+		"Programming Languages",
+		"Other"
+	],
+	"keywords": [
+		"valgrind",
+		"task",
+		"launch",
+		"cpp",
+		"debug"
+	],
+	"activationEvents": [
+		"onCommand:valgrind-task-integration.valgrindPid",
+		"onCommand:valgrind-task-integration.valgrindGdbArg",
+		"onCommand:workbench.action.tasks.runTask"
+	],
+	"main": "./dist/extension.js",
+	"extensionDependencies": [
+		"ms-vscode.cmake-tools"
+	],
+	"contributes": {
+		"commands": [
+			{
+				"command": "valgrind-task-integration.valgrindPid",
+				"title": "Valgrind Task Integration: Get Valgrind Debugger pid"
+			},
+			{
+				"command": "valgrind-task-integration.valgrindGdbArg",
+				"title": "Valgrind Task Integration: Get Valgrind Debugger gdb arguments"
+			}
+		],
+		"taskDefinitions": [
+			{
+				"type": "valgrind-debug",
+				"required": [
+					"target"
+				],
+				"properties": {
+					"target": {
+						"type": "string"
+					},
+					"valgrind": {
+						"type": "object",
+						"required": [
+							"args"
+						],
+						"properties": {
+							"args": {
+								"type": "array",
+								"items": {
+									"type": "string"
+								}
+							}
+						}
+					}
+				}
+			},
+			{
+				"type": "valgrind",
+				"required": [
+					"target"
+				],
+				"properties": {
+					"target": {
+						"type": "string"
+					},
+					"valgrind": {
+						"type": "object",
+						"required": [
+							"args"
+						],
+						"properties": {
+							"args": {
+								"type": "array",
+								"items": {
+									"type": "string"
+								}
+							}
+						}
+					}
+				}
+			}
+		],
+		"problemMatchers": [
+			{
+				"name": "valgrind",
+				"owner": "cpp",
+				"applyTo": "allDocuments",
+				"fileLocation": "absolute",
+				"source": "valgrind",
+				"background": {
+					"activeOnStart": true,
+					"beginsPattern": "^==\\d+== Using Valgrind-[\\d\\.]+",
+					"endsPattern": "^==\\d+== ERROR SUMMARY:"
+				},
+				"pattern": [
+					{
+						"regexp": "^==\\d+== ((?:Invalid|Syscall param|Conditional jump or move|Mismatched|Source and destination overlap|Argument) .+)$",
+						"message": 1
+					},
+					{
+						"regexp": "^==\\d+== \\s+(?:by|at).*\\((?:in )?([^:)]+)(?:\\:(\\d+))?\\)$",
+						"file": 1,
+						"line": 2,
+						"loop": true
+					}
+				]
+			},
+			{
+				"name": "valgrind-debug",
+				"base": "$valgrind",
+				"background": {
+					"activeOnStart": true,
+					"beginsPattern": "^==\\d+== Using Valgrind-[\\d\\.]+",
+					"endsPattern": "^==\\d+== TO DEBUG THIS PROCESS"
+				}
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run package",
+		"compile": "webpack",
+		"watch": "webpack --watch",
+		"package": "webpack --mode production --devtool hidden-source-map",
+		"test-compile": "tsc -p ./",
+		"test-watch": "tsc -watch -p ./",
+		"pretest": "npm run test-compile && npm run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@semantic-release/changelog": "^6.0.1",
+		"@semantic-release/git": "^10.0.1",
+		"@types/glob": "^7.2.0",
+		"@types/mocha": "^9.1.1",
+		"@types/node": "^18.0.0",
+		"@types/vscode": "^1.53.0",
+		"@typescript-eslint/eslint-plugin": "^5.28.0",
+		"@typescript-eslint/parser": "^5.28.0",
+		"eslint": "^8.18.0",
+		"eslint-config-prettier": "^8.5.0",
+		"glob": "^8.0.3",
+		"mocha": "^10.0.0",
+		"semantic-release": "^19.0.3",
+		"semantic-release-vsce": "^5.0.17",
+		"ts-loader": "^9.3.0",
+		"typescript": "^4.7.4",
+		"vscode-test": "^1.5.0",
+		"webpack": "^5.73.0",
+		"webpack-cli": "^4.10.0"
+	},
+	"release": {
+		"branches": [
+			"main",
+			"develop"
+		],
+		"verifyConditions": [
+			"semantic-release-vsce",
+			"@semantic-release/github"
+		],
+		"prepare": {
+			"path": "semantic-release-vsce",
+			"packageVsix": true
+		},
+		"publish": [
+			"semantic-release-vsce",
+			{
+				"path": "@semantic-release/github",
+				"assets": "*.vsix"
+			}
+		],
+		"plugins": [
+			"@semantic-release/commit-analyzer",
+			"@semantic-release/release-notes-generator",
+			"@semantic-release/changelog",
+			[
+				"@semantic-release/git",
+				{
+					"message": "chore(release): ${nextRelease.version}\n\n${nextRelease.notes}"
+				}
+			],
+			"@semantic-release/github"
+		]
+	},
+	"__metadata": {
+		"id": "32f333d2-e06d-47c0-a41e-c1d41c73e2bc",
+		"publisherId": "e0a26f15-bef5-4bc3-9a63-42d2722673c1",
+		"publisherDisplayName": "Aram Becker",
+		"targetPlatform": "undefined",
+		"isApplicationScoped": false,
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"preRelease": false,
+		"installedTimestamp": 1666316857279
+	}
+}

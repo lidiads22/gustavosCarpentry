@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config date="1637469689244" transient="false" shared_ur="file:configuration/org.eclipse.update/platform.xml" version="3.0">
+	<site updateable="true" url="file:/Users/lidiadesantiago/.eclipse/org.eclipse.platform_4.21.0_1211872926_macosx_cocoa_x86_64/" enabled="true" policy="USER-EXCLUDE">
+		<feature id="io.github.pyvesb.eclipse_planet_themes" version="0.2.3.202111141658" url="features/io.github.pyvesb.eclipse_planet_themes_0.2.3.202111141658/">
+		</feature>
+	</site>
+</config>

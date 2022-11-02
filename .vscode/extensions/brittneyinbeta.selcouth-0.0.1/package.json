@@ -1,0 +1,58 @@
+{
+	"name": "Selcouth",
+	"displayName": "Selcouth",
+	"description": "Created by Brittney in Beta. Selcouth, meaning unfamiliar, rare, strange and yet marvelous. ",
+	"publisher": "BrittneyInBeta",
+	"author": {
+		"name": "Brittney Stuart"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/desertdev2613/Selcouth-vscode-theme.git"
+	},
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.49.0"
+	},
+	"categories": [
+		"Themes"
+	],
+	"keywords": [
+		"brittneyinbeta",
+		"brittneyinbeta theme",
+		"dark theme",
+		"VsCode theme",
+		"girly",
+		"bright colors",
+		"pink",
+		"blue",
+		"pastels",
+		"modern",
+		"contrasting"
+	],
+	"icon": "logo.jpg",
+	"galleryBanner": {
+		"color": "#000000",
+		"theme": "dark"
+	},
+	"contributes": {
+		"themes": [
+			{
+				"label": "Selcouth",
+				"uiTheme": "vs-dark",
+				"path": "./themes/Selcouth-color-theme.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "65ba5407-3316-4e64-869a-14e8ea05a0bc",
+		"publisherId": "527a4cae-aaaa-452c-915e-e7196a4fde62",
+		"publisherDisplayName": "BrittneyInBeta",
+		"targetPlatform": "undefined",
+		"isApplicationScoped": false,
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"preRelease": false,
+		"installedTimestamp": 1665693110216
+	}
+}

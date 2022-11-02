@@ -1,0 +1,9 @@
+[
+  {
+    "name": "Clang 13.1.6 arm64-apple-darwin21.6.0",
+    "compilers": {
+      "C": "/usr/bin/clang",
+      "CXX": "/usr/bin/clang++"
+    }
+  }
+]

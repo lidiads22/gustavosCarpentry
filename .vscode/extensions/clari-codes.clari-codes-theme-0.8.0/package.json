@@ -1,0 +1,38 @@
+{
+	"name": "clari-codes-theme",
+	"displayName": "Girly Theme",
+	"description": "A theme with girly colors because coders also love pink.",
+	"version": "0.8.0",
+	"engines": {
+		"vscode": "^1.47.0"
+	},
+	"publisher": "clari-codes",
+	"categories": [
+		"Themes"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://gitlab.com/clarissaflores/clari-codes-theme.git"
+	},
+	"contributes": {
+		"themes": [
+			{
+				"label": "clari-codes-theme",
+				"uiTheme": "vs-dark",
+				"path": "./themes/clari-codes-theme-color-theme.json"
+			}
+		]
+	},
+	"icon": "logo.jpg",
+	"__metadata": {
+		"id": "00f34dce-20fb-417d-9e8e-bfdae96fa1b0",
+		"publisherId": "4f40d4a9-bf38-415c-ba75-de439e239147",
+		"publisherDisplayName": "clari-codes",
+		"targetPlatform": "undefined",
+		"isApplicationScoped": false,
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"preRelease": false,
+		"installedTimestamp": 1665693005453
+	}
+}
